@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build . -t sg/client
+docker build ../ -t sg/client
