@@ -4,8 +4,15 @@ services:
     # ###
     # 다음 주석을 지우고 compose 를 완성하자
     # ###
+    build: ./server
+    volumes:
+      - ./server:/app
+
 
   client:
-    # ###
-    # 다음 주석을 지우고 compose 를 완성하자
-    # ###
+    # compose 를 완성하자
+    build: ./client
+    volumes:
+      - ./client:/app
+    depends_on:
+      - server
